@@ -9,11 +9,7 @@ services:
     container_name: book-catalog
     ports:
       - "8000:8000" # Maps port 8000 on the host to port 8000 in the container
-    # environment:
-    #   - UVICORN_PORT=8000
-    # depends_on:
-    #   - db
-
+   
   inventory_management:
     image: inventory-management
     build:
@@ -22,19 +18,3 @@ services:
     container_name: inventory-management
     ports:
       - "8001:8000" # Maps port 8001 on the host to port 8000 in the container
-    # environment:
-    #   - UVICORN_PORT=8000
-    # depends_on:
-    #   - db
-
-#   db:
-#     image: postgres
-#     environment:
-#       POSTGRES_DB: exampledb
-#       POSTGRES_USER: user
-#       POSTGRES_PASSWORD: password
-#     volumes:
-#       - postgres_data:/var/lib/postgresql/data
-
-# volumes:
-#   postgres_data:
